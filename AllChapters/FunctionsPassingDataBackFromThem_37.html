@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Functions Passing Back Data From Them</title>
+    <script>
+
+
+        function calcTot(merchTot){
+            var orderTot;
+            if(merchTot>=100){
+                orderTot=merchTot;
+            }
+            else if(merchTot<50.01){
+                orderTot=merchTot+5;
+            }
+            else{
+                orderTot=merchTot+5+ (.03*(merchTot-50));
+            }
+            return orderTot;
+        }
+
+
+        var totalToCharge = calcTot(79.99);
+        alert(totalToCharge);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

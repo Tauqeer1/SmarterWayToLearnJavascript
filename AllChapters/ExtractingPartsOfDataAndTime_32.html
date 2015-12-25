@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Extracting Parts of data and time</title>
+    <script>
+        var weekArray = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        var monthArray = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        var dateDayAndTimeObject = new Date();
+        alert("Full date day and time "+dateDayAndTimeObject);
+        var day = dateDayAndTimeObject.getDay();
+        alert("Day "+weekArray[day]);  //Day of a week
+        var month = dateDayAndTimeObject.getMonth();
+        alert("Month "+month);  //Month
+        var date = dateDayAndTimeObject.getDate();
+        alert("Date "+date);    //Date of the month
+        var getFullYear = dateDayAndTimeObject.getFullYear();
+        alert("Full year "+getFullYear);
+        var getHours = dateDayAndTimeObject.getHours(); //Hours in 24hr format
+        alert("Hour "+getHours);
+        var getMinutes = dateDayAndTimeObject.getMinutes();
+        alert("Minutes "+getMinutes);
+        var getSeconds = dateDayAndTimeObject.getSeconds();
+        alert("Seconds "+getSeconds);
+        var getMilliSeconds = dateDayAndTimeObject.getMilliseconds();
+        alert("Milli Seconds "+getMilliSeconds);
+        var getTime = dateDayAndTimeObject.getTime();   //Gives you number of milli second since midnight 1 jan 1970
+        alert("Time "+getTime);
+
+        var currentTime = getHours+":"+getMinutes+":"+getSeconds;
+        alert("Current Time "+currentTime);
+        var currentDateAndMonth = date+"/"+monthArray[month]+"/"+getFullYear;
+        alert("Current date and month "+currentDateAndMonth);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

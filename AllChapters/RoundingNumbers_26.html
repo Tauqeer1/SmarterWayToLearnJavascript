@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Rounding Numbers</title>
+    <script>
+
+        var number;
+        //Round method round the number to the nearest integer
+        number = 0.5;
+        number = Math.round(number);    //0.5 --> 1
+        number = 1;
+        number = Math.round(number);    //1 --> 1
+        number = 1.5;
+        number = Math.round(number);    //1.5 --> 2
+        number = 1.2;
+        number = Math.round(number);    //1.2 --> 1
+        number = 1.4;
+        number = Math.round(number);    //1.4 --> 1
+        number = 1.6;
+        number = Math.round(number);    //1.6 --> 2
+        number = -0.5;
+        number = Math.round(number);    //-0.5 --> 0
+        number = -0.6;
+        number = Math.round(number);    //-0.6 --> -1
+        number = -0.4;
+        number = Math.round(number);    //-0.4 --> 0
+        number = -1.5;
+        number = Math.round(number);    //-1.5 --> -1
+        number = -1.6;
+        number = Math.round(number);    //-1.6 --> -2
+        number = -1.45;
+        number = Math.round(number);    //-1.45 --> -1
+        number = -1.733;
+        number = Math.round(number);    //-1.733 --> -2
+        number  = 0.0678437;
+        number = Math.round(number);    //0.0678437 --> 0
+        //Ceil Method rounds a number upwards to the nearest integer
+        number = 0.000001;
+        number = Math.ceil(number);     //0.000001 --> 1
+        number = 0.1;
+        number = Math.ceil(number);     //0.1 --> 1
+        number = 0.5;
+        number = Math.ceil(number);     //0.5 --> 1
+        number = -0.5;
+        number = Math.ceil(number);     //-0.5 --> 0
+        //Floor Method round a number downwards to the nearest integer
+        number = 0.5;
+        number = Math.floor(number);    //0.5 --> 0
+        number = -0.5;
+        number = Math.floor(number);    //-0.5 --> -1
+        alert(number);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

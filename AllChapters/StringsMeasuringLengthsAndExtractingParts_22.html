@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Strings Measuring Length and Extracting parts</title>
+    <script>
+//        var matchFound = false;
+//        var cityToCheck = prompt("Enter clean city?");
+//        var cleanestCities = ["Santa fe","Cheyenne","Tucson","Great falls","Honolulu"];
+//        var firstChar = cityToCheck.slice(0,1); //Gets first Character
+//        var otherChar = cityToCheck.slice(1);   //Gets all character from index 1 till end
+//
+//        firstChar = firstChar.toUpperCase();
+//        otherChar = otherChar.toLowerCase();
+//        cityToCheck = firstChar+otherChar;
+//        alert(cityToCheck);
+//
+//        for(var i=0;i<cleanestCities.length;i++){
+//            if(cityToCheck===cleanestCities[i]){
+//                matchFound = true;
+//                alert("It is one of the cleanest cities");
+//                break;
+//            }
+//        }
+//        if(matchFound===false){
+//            alert("It is not in the list");
+//        }
+
+
+       /* var month = prompt("Enter Month");
+        var monthAbb;
+        var charInMonth = month.length;
+        if(charInMonth > 3){
+            monthAbb = month.slice(0,3);
+            alert("Month Abbreviation "+monthAbb);
+        }*/
+
+
+        var str = prompt("Enter some text");
+        var numChars = str.length;
+        for(var i = 0;i<numChars;i++){
+            if(str.slice(i,i+2)===" "){
+                alert("No Double Spaces");
+                break;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

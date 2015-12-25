@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Arrays Removing,inserting and extracting elements</title>
+    <script>
+        var pets = ["dog","cat","fly","bug","ox"];
+        alert(pets);
+        //pets.shift();   //Remove element from the beginning of array
+        //alert(pets);
+        //pets.unshift("dog");    //add an element at starting of array
+        //alert(pets);
+
+
+        //Splice method
+        //pets.splice(2,2,"bird","duck","emu");
+        //alert(pets);
+        //Splice() method is used for adding and removing elements from array
+        //splice(index,howmany,item1,...,itemN(optional));
+        //pets.splice(1,2);   //[dog,bug,ox]
+        //pets.splice(1,3);  //[dog,ox]
+        //pets.splice(1,0,"tiger");   //[dog,tiger,cat,fly,bug,ox]
+        //pets.splice(1,1,"tiger");   //[dog,tiger,fly,bug,ox]
+        //pets.splice();      //[dog,cat,fly,bug,ox]
+        //alert(pets);
+        //Slice method copy one or more consecutive elements in any position and put into new array
+        //slice(start,end-1);
+        var noPets;
+        noPets = pets.slice(2,4);   //[fly,bug]
+        noPets = pets.slice(2,5);   //[fly,bug,ox];
+        noPets = pets.slice(1,2);   //[cat];
+        noPets = pets.slice(0,1);   //[dog]
+        noPets = pets.slice(0);     //[dog,cat,fly,bug,ox]
+        noPets = pets.slice();      //[dog,cat,fly,bug,ox]
+        alert(noPets);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>For Loops</title>
+    <script>
+        var matchFound = false;
+        var cityToCheck = prompt("Enter clean city?");
+        var cleanestCities = ["Santa Fe","Cheyenne","Tucson","Great Falls","Honolulu"];
+
+        for(var i=0;i<cleanestCities.length;i++){
+            if(cityToCheck===cleanestCities[i]){
+                matchFound = true;
+                alert("It is one of the cleanest cities");
+                break;
+            }
+        }
+        if(matchFound===false){
+            alert("It is not in the list");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Controlling the length of decimal</title>
+    <script>
+        /*var price = 9.95;
+        var salesTax = 6.5;
+        var taxRate = salesTax / 100;
+        var total = price + (price * taxRate);
+        total = total.toFixed(2);
+        alert(total);*/
+
+
+        var number = 1.555;
+//        var total = number.toFixed(2);
+//        alert(total);
+        var str = number.toString();
+        //alert(str.length);      //5
+        if(str.charAt(str.length - 1) === "5"){
+            str = str.slice(0,str.length-1)+"6";
+
+        }
+        number = Number(str);
+        var total = number.toFixed(2);
+        alert(total);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

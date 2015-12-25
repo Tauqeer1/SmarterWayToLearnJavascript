@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Nested For Loops</title>
+    <script>
+        var firstNames = ["BlueRay","Upchuck","Lojack","Gizmo","Do-rag"];
+        var lastNames = ["Zzz","Burp","Dogbone","Droop"];
+        var fullNames = [];
+        for(var i=0;i<firstNames.length;i++){
+            for(var j=0;j<lastNames.length;j++){
+                fullNames.push(firstNames[i]+lastNames[j]);
+            }
+        }
+        alert(fullNames);
+        alert(fullNames.length);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

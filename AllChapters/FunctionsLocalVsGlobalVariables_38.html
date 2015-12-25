@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Functions Local vs Global variables</title>
+    <script>
+        var sum;    //Global variable
+        function addNumbers(){
+            var sum;        //Local variable
+            sum = 2+2;
+            alert(sum);
+        }
+        addNumbers();
+        sum =2;
+        alert(sum);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

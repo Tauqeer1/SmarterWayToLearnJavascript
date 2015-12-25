@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Changing Case</title>
+    <script>
+        var matchFound = false;
+        var cityToCheck = prompt("Enter clean city?");
+        cityToCheck = cityToCheck.toLowerCase();
+        //cityToCheck = cityToCheck.toUpperCase();
+        var cleanestCities = ["santa fe","cheyenne","tucson","great falls","honolulu"];
+
+        for(var i=0;i<cleanestCities.length;i++){
+            if(cityToCheck===cleanestCities[i]){
+                matchFound = true;
+                alert("It is one of the cleanest cities");
+                break;
+            }
+        }
+        if(matchFound===false){
+            alert("It is not in the list");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
