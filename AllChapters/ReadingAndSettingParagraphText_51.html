@@ -2,9 +2,26 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Reading And Setting Paragraph text</title>
 </head>
 <body>
-
+    <p id="slowLoris">
+        Slow lorises are a group of several species of strepsirrhine primates which make up the genus
+        Nycticebus.
+        <a href="javascript:void(0);" onclick="expandLoris();"><em>Click for more</em></a>
+    </p>
+    <div id="lorisList">
+        <input type="button" value="Place a list" onclick="placeAList();">
+    </div>
+    <script>
+        function expandLoris(){
+            var expandedParagraph = "Slow lorises are a group of several species of trepsirrhine primates which make up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have several adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time.Slow lorises have a toxic bite, a rare trait among mammals.";
+            document.getElementById('slowLoris').innerHTML = expandedParagraph;
+        }
+        function placeAList(){
+            var listToPlace = "<ol><li>Slow loris</li><li>Fast loris</li><li>Just right loris</li></ol>";
+            document.getElementById('lorisList').innerHTML = listToPlace;
+        }
+    </script>
 </body>
 </html>

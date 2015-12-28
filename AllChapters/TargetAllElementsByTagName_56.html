@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Target all elements by tag name</title>
+</head>
+<body>
+    <p>The bed is too small</p>
+    <p>The bed is too big</p>
+    <p>The bed is just right</p>
+
+
+    <script>
+
+        var par = document.getElementsByTagName('p');
+        var textOfSecondParagraph = par[1].innerHTML;
+        par[1].innerHTML = "Text has been changed";
+
+        for(var i=0;i<par.length;i++){
+            par[i].style.fontSize = "5em";
+        }
+
+        /*function makeBig(){
+            var getParagraphs = document.getElementsByTagName("p");
+            getParagraphs.style.fontSize = "3em";
+        }*/
+    </script>
+</body>
+</html>

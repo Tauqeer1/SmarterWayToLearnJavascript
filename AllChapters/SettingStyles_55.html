@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Setting Styles</title>
+</head>
+<body>
+
+    <p id="para" onmouseover="makeBig();">
+        In Chapter 52 you learned how to add a css class to any element to change its styling. For
+        example, this function adds the class "big" to an element. If, for example, the new class, "big,"
+        specifies a larger font size for the element than it has originally, the result is that the text inside
+        the element gets bigger
+    </p>
+    <img src="images/javascript1.jpg" id="img" onmouseover="changePosition();">
+    <img src="images/javascript2.jpg" id="secondImage" onmouseover="Hide();">
+    <script>
+        function makeBig(){
+            var getParagraph = document.getElementById("para");
+            getParagraph.style.fontSize = "2em";
+        }
+        function changePosition(){
+            var getPosition = document.getElementById('img');
+            getPosition.style.cssFloat = "right";
+        }
+        function Hide(){
+            var getImage = document.getElementById('secondImage');
+            getImage.style.visibility = "hidden";
+        }
+    </script>
+</body>
+</html>

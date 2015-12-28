@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dom More ways to target elements</title>
+</head>
+<body>
+
+    <div id="div1">
+        <div id="div2">
+            <p>Chicago</p>
+            <p>Kansas city</p>
+            <p>St Louis</p>
+        </div>
+    </div>
+
+    <script>
+        //var targetNode = parentNode.childNodes[0];    //Same as the below line
+//        var targetNode = parentNode.firstChild;         //Same as the above
+
+        //You can target last child of a collection like this
+//        var targetNode = parentNode.lastChild;
+
+
+
+        var childNode = document.getElementById("div2");
+        var parentNode = childNode.parentNode;
+        alert(parentNode.nodeName);
+
+    </script>
+
+</body>
+</html>

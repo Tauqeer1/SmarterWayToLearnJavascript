@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>      <!-- child 0 -->
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dom Finding Children</title>
+</head>
+<body>      <!--child 1-->
+
+this is body
+    <div id="cal">
+        <p>Southern Call is sunny</p>
+        <p>Northern Call is rainy</p>
+        <p>Eastern Call is desert</p>
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is sparse</p>
+    </div>
+
+    <script>
+        //First way to read paragraph number 4
+        var secondDiv = document.getElementById('ny');
+        var paragraphArray = secondDiv.getElementsByTagName('p');
+        var readContent = paragraphArray[1].innerHTML;
+        alert("First Method "+readContent);
+
+        //Second way to read paragraph number 4
+        var paragraphCollection = document.getElementsByTagName('p');
+        var content  = paragraphCollection[4].innerHTML;
+        alert("Second method "+content);
+
+        //Third way to read paragraph number 4
+        //Answer is not correct due to junk artifact or node (i.e Some extra unnecessary nodes in DOM tree)
+        var p = document.childNodes[0].childNodes[1].childNodes[1].childNodes[1];
+        var content1 = p.innerHTML;
+        alert(content1);
+
+
+
+
+    </script>
+</body>
+</html>

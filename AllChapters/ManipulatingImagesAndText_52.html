@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Manipulating image and text</title>
+    <style>
+        .abc {
+            display: none;
+        }
+        #para{
+            font-size: 2em;
+
+        }
+        .big{
+           background-color: blue;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="images/javascript1.jpg" id="ugly" onclick="makeInvisible();">
+    <p id="para"  onmouseover="makeParagraphBig();" >
+        If you want to add a class to an element, preserving its existing classes, you can do it. For
+        example, suppose you have a paragraph with a class that styles it in Verdana, size 1 em. When
+        the user mouses over it, you want to double its size to 2 em. But you don't want to lose the
+        Verdana styling of its original class. Rather than replace the class that styles it in Verdana, you
+        want to retain that class and add the class that enlarges the font
+    </p>
+
+    <script>
+        function makeInvisible(){
+            document.getElementById("ugly").className = "abc";
+        }
+        function makeParagraphBig(){
+
+            document.getElementById("para").className += " big";
+        }
+    </script>
+</body>
+</html>

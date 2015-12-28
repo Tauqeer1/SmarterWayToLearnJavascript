@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM : Junk artifact and node type</title>
+</head>
+<body>
+
+    <div id="humpty">
+        <p>All the king's horse.</p>
+        <p>All the dude's crew.</p>
+        <p>All the town's orthopedist.</p>
+    </div>
+
+    <script>
+        var d = document.getElementById("humpty");
+        var pCounter = 0;
+        for(var i=0;i< d.childNodes.length;i++){
+            alert("Child node type "+ d.childNodes[i].nodeType);
+            //If node type is an element node then its value is 1
+            if(d.childNodes[i].nodeType === 1){
+
+                pCounter++;
+            }
+            if(pCounter===2){
+                d.childNodes[i].innerHTML="All his men";
+                break;
+            }
+        }
+    </script>
+
+</body>
+</html>

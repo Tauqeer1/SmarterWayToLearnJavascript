@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dom Counting elements</title>
+</head>
+<body>
+
+    <div id="div1">
+        <div id="div2">
+            <p>Chicago</p>
+            <p>Kansas city</p>
+            <p>St Louis</p>
+        </div>
+    </div>
+
+    <script>
+        var parentNode = document.getElementById('div1');
+        var nodeList = parentNode.childNodes;
+        var howManyKids = nodeList.length;
+    </script>
+</body>
+</html>

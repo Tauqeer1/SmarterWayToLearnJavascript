@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Target Some Element by Tag name</title>
+
+</head>
+<body>
+    <p>
+        This bed is small
+    </p>
+    <p>
+       This bed is big
+    </p>
+    <p>
+        This bed is short
+    </p>
+    <div id="someParagraph">
+        <p>
+            This bed is short and inside the div tag
+        </p>
+        <p>
+            This bed is long and inside the div tag
+        </p>
+        <p>
+            This bed is big and inside the div tag
+        </p>
+    </div>
+    <script>
+
+        var targetDiv = document.getElementById('someParagraph');
+        var paragraph = targetDiv.getElementsByTagName('p');
+        for(var i=0;i<paragraph.length;i++){
+            paragraph[i].style.fontSize = "2em";
+        }
+
+
+    </script>
+</body>
+</html>

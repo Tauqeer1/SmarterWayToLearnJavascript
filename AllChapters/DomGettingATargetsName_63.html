@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dom Getting a targets name</title>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <p>Chicago</p>
+            <p>Kansas city</p>
+            <p>St Louis</p>
+        </div>
+    </div>
+
+    <script>
+        var parent = document.getElementById('div1');
+        var target = parent.firstChild;
+        var nName = target.nodeName;
+        alert(nName);
+        var nTextContent = target.nodeValue;
+        alert(nTextContent);
+    </script>
+</body>
+</html>
