@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+
+    <script>
+        var whereAt = window.location.href;
+        alert("Url address : "+whereAt);
+        var theDomainName = window.location.hostname;
+        alert("Domain name : "+theDomainName);
+        var completePathName = window.location.pathname;
+        alert("Path name : "+completePathName);
+        var theAnchor = window.location.hash;
+        alert("Anchor# : "+theAnchor);
+
+
+
+        //Another example
+        window.location.href = "http://www.facebook1.com/friend.html";
+        //alert("url address : "+location.href);
+        var currentSite = window.location.hostname;
+        alert("Current Site : "+currentSite);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Object Methods</title>
+</head>
+<body>
+
+    <script>
+        var plan1 = {
+            name : "Basic",
+            price : 3.99,
+            space : 100,
+            transfer : 1000,
+            pages : 10,
+            discountMonths : [6,7],   //[Jul,Aug]
+            calcAnnual : function (discountRate){
+                var bestPrice = this.price;
+                var currDate = new Date();
+                var thisMonth = currDate.getMonth();
+                for(var i=0;i<this.discountMonths.length;i++){
+                    if(this.discountMonths[i] === thisMonth){
+                        bestPrice = this.price * discountRate;
+                        break;
+                    }
+                }
+                return bestPrice * 12;
+            }
+        };
+
+
+        var annualPrice = plan1.calcAnnual(0.8);
+        alert(annualPrice);
+    </script>
+
+
+</body>
+</html>

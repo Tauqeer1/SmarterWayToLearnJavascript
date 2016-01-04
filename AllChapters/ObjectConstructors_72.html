@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Object Constructors</title>
+</head>
+<body>
+
+    <script>
+
+        //Constructor functions
+        //Constructor functions begin with a capital letter name(best practice)
+        //Each parameter value is attached to a property value
+        //Parameter name and property name can be different
+        function Plan(name,price,space,transfer,pages){
+            this.name1 = name;
+            this.price1 = price;
+            this.space1 = space;
+            this.transfer1 = transfer;
+            this.pages1 = pages;
+        }
+
+        //Now let's make the object using object constructor
+        var plan1 = new Plan("Basic",3.99,100,1000,10);
+        var plan2 = new Plan("Premium",5.99,500,5000,50);
+        var plan3 = new Plan("Ultimate",9.99,2000,20000,500);
+
+
+    </script>
+
+
+</body>
+</html>

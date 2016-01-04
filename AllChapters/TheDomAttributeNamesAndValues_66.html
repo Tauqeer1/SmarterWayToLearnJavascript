@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Attribute names and values</title>
+</head>
+<body>
+
+    <p id="firstID" class="firstClass" onmouseover="abc();">
+        This is Pakistan.
+    </p>
+
+    <script>
+        //Make a collection of all attributes.
+        var list = document.getElementById('firstID').attributes;
+        var numberOfItems = list.length;
+        alert(numberOfItems);
+        var nName = list[0].nodeName;
+        alert(nName);
+
+        //Iterate through list of items in list collection
+        for(var i=0;i<numberOfItems;i++){
+            alert(list[i].nodeName);
+        }
+    </script>
+
+
+</body>
+</html>

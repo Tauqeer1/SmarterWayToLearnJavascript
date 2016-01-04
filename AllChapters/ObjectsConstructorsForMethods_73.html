@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Object constructors for methods</title>
+</head>
+<body>
+
+    <script>
+
+        //Constructor function (Just like classes in c#)
+        function Plan(name,price,space,transfer,pages,discountMonths){
+            this.name1 = name;
+            this.price1 = price;
+            this.space1 = space;
+            this.transfer1 = transfer;
+            this.pages1 = pages;
+            this.discountMonths1 = discountMonths;
+            this.calcAnnual = function (discountRate){
+                var bestPrice = this.price1;
+                var currDate = new Date();
+                var thisMonth = currDate.getMonth();
+                for(var i=0;i<this.discountMonths1.length;i++){
+                    if(this.discountMonths1[i]===thisMonth){
+                        bestPrice = this.price1 * discountRate;
+                        break;
+                    }
+                }
+                return bestPrice*12;
+            };
+        }
+
+        //object instantiation
+        var p1 = new Plan("basic",3.99,100,1000,10,[6,7]);
+        var annualPrice = p1.calcAnnual(0.85);
+        alert(annualPrice);
+
+    </script>
+</body>
+</html>

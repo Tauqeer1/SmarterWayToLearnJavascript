@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Object properties</title>
+</head>
+<body>
+
+    <script>
+
+        //Creating an empty object and properties will be added later
+        var anyObject = {};
+        //Add a new property to the object with undefined type and can be filled later by a value
+        anyObject.newProperty = undefined;
+
+        var anotherObject = {
+          name : "Object"
+        };
+        //Checking for the property in object
+        hasProperty = "name" in anotherObject;
+        alert(hasProperty);
+        //Delete object property
+        delete anotherObject.name;
+        //Check to see if property of object exists return true if exits otherwise false
+        propertyExists = "name" in anotherObject;
+        alert(propertyExists);
+
+    </script>
+</body>
+</html>

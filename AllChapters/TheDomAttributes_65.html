@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The Dom Attribute</title>
+</head>
+<body>
+
+    <div id="p1">
+        <p class="special">
+            <img src="images/javascript2.jpg">
+        </p>
+    </div>
+
+    <script>
+        var target = document.getElementById('p1');
+        var hasID = target.hasAttribute("id");
+        alert(hasID);
+        var idValue = target.getAttribute('id');
+        alert(idValue);
+        target.setAttribute("id","p2");
+        var changedId = target.getAttribute('id');
+        alert(changedId);
+    </script>
+
+</body>
+</html>

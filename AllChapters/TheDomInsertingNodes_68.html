@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dom Inserting nodes</title>
+</head>
+<body>
+
+    <div id="div">
+        <p>This is first paragraph</p>
+        <p>This is second paragraph</p>
+    </div>
+
+    <script>
+
+
+        //Creating paragraph node
+        var paragraph = document.createElement("p");
+        //Creating a text node
+        var text = document.createTextNode("This is paragraph");
+        //Append text to the paragraph child
+        paragraph.appendChild(text);
+
+        //Now append paragraph to the div node with an id="div"
+        var targetDiv = document.getElementById("div");
+        paragraph1 = targetDiv.childNodes[2];
+
+        targetDiv.insertBefore(paragraph,paragraph1);
+
+    </script>
+
+
+</body>
+</html>

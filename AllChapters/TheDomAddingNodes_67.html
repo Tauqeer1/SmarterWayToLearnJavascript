@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The Dom Adding nodes</title>
+</head>
+<body>
+
+    <script>
+
+        //Creating node with p tag
+        var nodeToAdd = document.createElement("p");
+        //Setting attribute to the created node above (nodeToAdd)
+        nodeToAdd.setAttribute("class","pClass");
+        //creating a div node
+        var divNode = document.createElement("div");
+        //Creating imgNode
+        var imgNode = document.createElement("img");
+        //Setting attribute to the imgNode created above
+        imgNode.setAttribute("border","1");
+        //Creating textNode
+        var newText = document.createTextNode("Hello!");
+        //Now we place the newText node into the paragraph element
+        nodeToAdd.appendChild(newText);
+
+
+    </script>
+</body>
+</html>

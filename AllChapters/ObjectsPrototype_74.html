@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Objects prototype</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        function Plan(name,price,space,transfer,pages,discountMonths){
+            this.name1 = name;
+            this.price1 = price;
+            this.space1 = space;
+            this.transfer1 = transfer;
+            this.pages1 = pages;
+            this.discountMonths1 = discountMonths;
+
+        }
+
+       /* Prototype whenever the object share same method or property we put it in
+        prototype to avoid unnecessary duplication */
+        //In the above Plan constructor the calculate annual method is same for every plan so we put in prototype
+        //This method calcAnnual shared by all object
+        Plan.prototype.calcAnnual = function (discountRate){
+            var bestPrice = this.price1;
+            var currDate = new Date();
+            var thisMonth = currDate.getMonth();
+            for(var i=0;i<this.discountMonths1.length;i++){
+                if(this.discountMonths1[i]===thisMonth){
+                    bestPrice = this.price1 * discountRate;
+                    break;
+                }
+            }
+            return bestPrice * 12;
+        };
+        //This property cancelable shared by all objects
+        Plan.prototype.cancellable = true;
+
+        var p1 = new Plan("basic",3.99,100,1000,10,[6,7]);
+        var p2 = new Plan("Premium",5.99,500,5000,50,[6,8,9]);
+        var annualPrice = p1.calcAnnual(0.85);
+        alert("Annual price for plan1 " +annualPrice);
+        annualPrice = p2.calcAnnual(0.85);
+        alert("Annual price for plan2 " +annualPrice);
+
+        alert("Cancellable property for plan 1 = "+p1.cancellable);
+        alert("Cancellable property for plan 2 = "+p2.cancellable);
+
+        //Override the cancellable property for plan1
+        p1.cancellable = false;
+        alert("Cancellable property for plan 1 = "+p1.cancellable);
+        alert("Cancellable property for plan 2 = "+p2.cancellable);
+
+    </script>
+</body>
+</html>
