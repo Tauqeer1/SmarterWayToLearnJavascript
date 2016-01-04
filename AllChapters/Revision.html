@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Revision</title>
+</head>
+<body>
+
+    <script>
+        var greeting = "g'day";
+        //alert(greeting);
+
+        var originalNumber = "23";
+        var newNumber = originalNumber + 7;
+        //alert(newNumber);
+
+        var number = "23" + 7;
+        //alert(number);
+
+        var anotherNumber = 7 + "23";
+        //alert(anotherNumber);
+
+        number = "23" - 7;
+        //alert(number);
+
+        //alert(2);
+        //alert(typeof 2);
+
+        number = 2 + 2;
+//        alert(number);
+//        alert(typeof number);
+
+        /*number = 1;
+        newNumber = number++;
+        alert(newNumber);   //1
+        alert(number);      //2
+        alert(number++);    //2
+        alert(number);      //3*/
+
+
+//        alert("2 plus 2 equals " +(2+2));   //4
+//        alert("2 plus 2 equals "+2+2);      //22
+
+        /*if(23 === "23"){
+            alert("Correct");
+        }
+        else{
+            alert("Incorrect");
+        }*/
+
+        /*var age =  prompt("Enter age");
+        var res = prompt("Enter resident");
+        if((age > 65 || age < 21) && res === "US"){
+            alert("Correct");
+        }
+        else{
+            alert("Incorrect");
+        }*/
+
+
+        /*var fruits = ["Banana","Orange","Apple","Mango"];
+        alert(fruits);
+        fruits.splice(0,1,"Pineapple");
+        alert(fruits);
+        var newArray = fruits.slice(-1,-0);
+        alert(newArray);*/
+
+        /*var string = prompt("Enter some text");     //tau
+        var numChars = string.length;               //3
+        for(var i=0;i<numChars;i++){
+            alert(string.slice(i,i+2));
+            if(string.slice(i,i + 2) === " "){        //0-1,1-2,2-3
+                alert("No double space");
+                break;
+            }
+        }*/
+
+
+        var a = Math.random();  a = (a * 6) + 1;  a = Math.round(a);
+        alert(a);
+
+        //var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"]; var fullNames = [];   for (var i = 0; i < firstNames.length; i++) {                  for (var j = 0; j < lastNames.length; j++) {                                fullNames.push(firstNames[i] + lastNames[j]);   } }    alert(fullNames[2]);
+</script>
+</body>
+</html>
